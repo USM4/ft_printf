@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror 
 NAME = libftprintf.a
-imps = ft_printf.o
+imps = ft_printf.o ft_char.o ft_str.o
 
 sources = $(imps:.o=.c)
 

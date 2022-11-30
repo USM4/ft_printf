@@ -6,7 +6,7 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:17:13 by oredoine          #+#    #+#             */
-/*   Updated: 2022/11/29 18:57:12 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/11/30 16:01:32 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ static void wich_type(char c, va_list arg, int *count)
         
     // else if (c == 'X')
 
-    // else if (c == '%')
+    else if (c == '%')
+    {
+        write(1,"%",1);
+        *count += 1;
+    }
 
 }
 
@@ -61,8 +65,4 @@ int ft_printf(const char *s, ...)
     }
      va_end(arg);
     return(where_count);
-}
-int main ()
-{
-
 }

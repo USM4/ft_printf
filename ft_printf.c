@@ -6,11 +6,11 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:17:13 by oredoine          #+#    #+#             */
-/*   Updated: 2022/11/30 16:01:32 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/12/02 19:33:51 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static void wich_type(char c, va_list arg, int *count)
 
@@ -19,18 +19,17 @@ static void wich_type(char c, va_list arg, int *count)
          ft_char(va_arg(arg, int), count);
     else if (c == 's')
         ft_str(va_arg(arg,const char *), count);
-    // else if (c == 'p')
+    else if (c == 'p')
+    {
+        write(1,"0x",2);
+        *count += 2;
+        ft_ulong(va_arg(arg, unsigned long), c, count);
+    }
         
-    // else if (c == 'd')
-        
-    // else if (c == 'i')
-
-    // else if (c == 'u')
-            
-    // else if (c == 'x')
-        
-    // else if (c == 'X')
-
+    else if (c == 'd' || c =='i')
+         ft_integer(va_arg(arg, long), c, count);
+    else if (c == 'u' || c == 'x' || c == 'X')
+            ft_puthexa(va_arg(arg, unsigned int), c, count);
     else if (c == '%')
     {
         write(1,"%",1);
@@ -66,3 +65,12 @@ int ft_printf(const char *s, ...)
      va_end(arg);
     return(where_count);
 }
+// int main ()
+// {
+//     // char *p="";
+//    char *s ="oredoine";
+//      char c = 'p';
+//     printf("%s\n %c \n", s, c);
+//     ft_printf("%s \n %c \n",s, c);
+    
+// }

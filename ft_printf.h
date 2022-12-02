@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 18:06:22 by oredoine          #+#    #+#             */
-/*   Updated: 2022/11/29 18:07:31 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/12/02 19:34:57 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef FT_PRINTF_H
+#define FT_PRINTF_H
 
 #include<unistd.h>
 #include<stdio.h>
 #include<stdarg.h>
 
-int ft_printf(const char *, ...);
-void ft_char(char c, int *count);
-void ft_str(const char *s, int *count);
-
+int     ft_printf(const char *, ...);
+void    ft_char(char c, int *count);
+void    ft_str(const char *s, int *count);
+void	ft_puthexa(unsigned int nbr, char c, int *count);
+void	ft_ulong(unsigned long nbr, char c, int *count);
+void	ft_integer(long nbr, char c, int *count);
 #endif

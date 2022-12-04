@@ -6,7 +6,7 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:17:13 by oredoine          #+#    #+#             */
-/*   Updated: 2022/12/02 19:33:51 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/12/04 19:00:29 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static void wich_type(char c, va_list arg, int *count)
     }
         
     else if (c == 'd' || c =='i')
-         ft_integer(va_arg(arg, long), c, count);
+         ft_integer(va_arg(arg, int),"0123456789", count);
     else if (c == 'u' || c == 'x' || c == 'X')
-            ft_puthexa(va_arg(arg, unsigned int), c, count);
+         ft_puthexa(va_arg(arg, unsigned int), c, count);
     else if (c == '%')
     {
         write(1,"%",1);
@@ -67,10 +67,10 @@ int ft_printf(const char *s, ...)
 }
 // int main ()
 // {
-//     // char *p="";
-//    char *s ="oredoine";
-//      char c = 'p';
-//     printf("%s\n %c \n", s, c);
-//     ft_printf("%s \n %c \n",s, c);
+// //     char *p="";
+// //    char *s ="oredoine";
+// //      char c = 'p';
+//     printf("%d\n",-10);
+//     ft_printf("%d",-10);
     
 // }

@@ -6,7 +6,7 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 18:06:22 by oredoine          #+#    #+#             */
-/*   Updated: 2022/12/02 19:34:57 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/12/04 18:57:13 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void    ft_char(char c, int *count);
 void    ft_str(const char *s, int *count);
 void	ft_puthexa(unsigned int nbr, char c, int *count);
 void	ft_ulong(unsigned long nbr, char c, int *count);
-void	ft_integer(long nbr, char c, int *count);
+void	ft_integer(long nbr,char *base, int *count);
 #endif

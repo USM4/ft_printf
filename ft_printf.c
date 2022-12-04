@@ -6,7 +6,7 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:17:13 by oredoine          #+#    #+#             */
-/*   Updated: 2022/12/04 19:00:29 by oredoine         ###   ########.fr       */
+/*   Updated: 2022/12/04 19:11:23 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,14 @@ int ft_printf(const char *s, ...)
      va_end(arg);
     return(where_count);
 }
-// int main ()
+// int	main()
 // {
-// //     char *p="";
-// //    char *s ="oredoine";
-// //      char c = 'p';
-//     printf("%d\n",-10);
-//     ft_printf("%d",-10);
-    
+// 	char *ptr = "oredoine";
+// 	int		i = -10;
+// 	unsigned int ui = 4294967295;
+// 	int x = 0;
+
+// 	printf("character: %c pointer in hexa: %p string pointed to: %s decimal: %d %i unsigned decimal: %u hexadecimal : %x heXadecimal : %X \n", 'X', ptr, ptr, i, i, ui, x, x);
+// 	ft_printf("character: %c pointer in hexa: %p string pointed to: %s decimal: %d %i unsigned decimal: %u hexadecimal : %x heXadecimal : %X \n", 'X', ptr, ptr, i, i, ui, x, x);
+
 // }

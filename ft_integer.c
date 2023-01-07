@@ -6,13 +6,13 @@
 /*   By: oredoine <oredoine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 19:32:51 by oredoine          #+#    #+#             */
-/*   Updated: 2022/12/04 19:11:32 by oredoine         ###   ########.fr       */
+/*   Updated: 2023/01/07 22:20:30 by oredoine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static  int ft_strlen(const char *p)
+static	int	ft_strlen(const char *p)
 {
 	int	i;
 
@@ -21,29 +21,26 @@ static  int ft_strlen(const char *p)
 		i++;
 	return (i);
 }
-void	ft_integer(long nbr,char *base, int *count)
+
+void	ft_integer(long nbr, char *base, int *count)
 {
-	int d;
-	
+	int	d;
+
 	d = ft_strlen(base);
-	if( nbr >= 0 && nbr < d )
+	if (nbr >= 0 && nbr < d)
 	{
-		write(1,&base[nbr],1);
+		write(1, &base[nbr], 1);
 		*count += 1;
 	}
-	else if(nbr >= d)
+	else if (nbr >= d)
 	{
 		ft_integer(nbr / d, base, count);
 		ft_integer(nbr % d, base, count);
 	}
-	
-	else if (nbr < 0 )
+	else if (nbr < 0)
 	{
-		// nbr = -nbr;
-		write(1,"-",1);
+		write(1, "-", 1);
 		*count += 1;
 		ft_integer(-nbr, base, count);
-    
 	}
-
-}      
+}

@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror 
 NAME = libftprintf.a
-imps = ft_printf.o ft_char.o ft_putstr.o ft_puthexa.o ft_ulong.o ft_integer.o
+imps = 
 
 sources = $(imps:.o=.c)
 
@@ -10,7 +10,7 @@ all : $(NAME)
  $(NAME) : $(imps)
 			ar -rc $(NAME) $(imps)
 
-%.o : %.c ft_printf.h
+%.o : %.c get_next_line.h
 	$(CC) $(CFLAGS) -c $<
 
 clean :
